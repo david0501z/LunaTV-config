@@ -236,11 +236,6 @@
       "api": "https://huawei8.live/api.php/provide/vod",
       "detail": "https://huawei8.live"
     },
-    "m3u8.apiyhzy.com": {
-      "name": "🎬樱花|点播",
-      "api": "https://m3u8.apiyhzy.com/api.php/provide/vod",
-      "detail": "https://m3u8.apiyhzy.com"
-    },
     "sdzyapi.com": {
       "name": "🎬闪电☆资源",
       "api": "https://sdzyapi.com/api.php/provide/vod",
@@ -291,11 +286,6 @@
       "api": "http://cj.ffzyapi.com/api.php/provide/vod",
       "detail": "http://cj.ffzyapi.com"
     },
-    "suoniapi.com": {
-      "name": "🎬索尼|点播",
-      "api": "https://suoniapi.com/api.php/provide/vod",
-      "detail": "https://suoniapi.com"
-    },
     "api.tiankongapi.com": {
       "name": "🎬📛挺好┃天空.云播",
       "api": "https://api.tiankongapi.com/api.php/provide/vod",
@@ -325,16 +315,6 @@
       "name": "🎬天翼|点播",
       "api": "https://www.911ysw.top/tianyi.php/provide/vod/",
       "detail": "https://www.911ysw.top"
-    },
-    "api.wujinapi.com": {
-      "name": "🎬无尽|点播",
-      "api": "https://api.wujinapi.com/api.php/provide/vod",
-      "detail": "https://api.wujinapi.com"
-    },
-    "cj.yayazy.net": {
-      "name": "🎬丫丫|点播",
-      "api": "https://cj.yayazy.net/api.php/provide/vod",
-      "detail": "https://cj.yayazy.net"
     },
     "api.niuniuzy.me": {
       "name": "🎬牛牛|点播",
@@ -400,11 +380,6 @@
       "name": "🎬小猫咪资源",
       "api": "https://zy.xmm.hk/api.php/provide/vod",
       "detail": "https://zy.xmm.hk"
-    },
-    "caiji.dbzy5.com": {
-      "name": "🎬豆瓣",
-      "api": "https://caiji.dbzy5.com/api.php/provide/vod",
-      "detail": "https://caiji.dbzy5.com"
     }
   }
 }
