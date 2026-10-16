@@ -46,8 +46,8 @@ jobs:
       - name: Validate jingjian.json
         run: jq empty jingjian.json
 
-      # 4️⃣ JSON 处理：生成 jin18.json（去掉 adult）
-      - name: Generate jin18.json (strip adult resources)
+      # 4️⃣ JSON 处理：生成 green.json（去掉 adult）
+      - name: Generate green.json (strip adult resources)
         run: |
           jq '{
             cache_time: .cache_time,
@@ -55,10 +55,10 @@ jobs:
               .api_site
               | with_entries(select(.value.name | startswith("🔞") | not))
             )
-          }' jingjian.json > jin18.json
+          }' jingjian.json > green.json
 
-      - name: Validate jin18.json
-        run: jq empty jin18.json
+      - name: Validate green.json
+        run: jq empty green.json
 
       # 5️⃣ Base58 编码
       - name: Encode JSON to Base58
@@ -70,7 +70,7 @@ jobs:
           const files = [
             { input: 'LunaTV-config.json', output: 'LunaTV-config.txt' },
             { input: 'jingjian.json', output: 'jingjian.txt' },
-            { input: 'jin18.json', output: 'jin18.txt' }
+            { input: 'green.json', output: 'green.txt' }
           ];
 
           files.forEach(file => {
@@ -106,7 +106,7 @@ jobs:
           git reset --soft origin/main
 
           # 添加所有生成文件
-          git add jingjian.json jin18.json LunaTV-config.txt jingjian.txt jin18.txt report.md README.md
+          git add jingjian.json green.json LunaTV-config.txt jingjian.txt green.txt report.md README.md
 
           # 提交更新，如果没有变化则输出提示
           git commit -m "自动更新 JSON、Base58 和 API 报告 ($(date -d '+8 hour' +'%Y-%m-%d %H:%M:%S CST'))" || echo "⚠️ 没有文件变化可提交"

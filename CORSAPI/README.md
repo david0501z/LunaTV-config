@@ -24,7 +24,7 @@ https://<你的域名>/?url=https://ikunzyapi.com/api.php/provide/vod/
 
 使用 `?source=` 参数选择不同的资源配置：
 
-- **`source=jin18`** - 精简版（31个资源，仅普通内容）
+- **`source=green`** - 精简版（31个资源，仅普通内容）
 - **`source=jingjian`** - 精简+成人版（61个资源）
 - **`source=full`** - 完整版（88个资源，**默认**）
 
@@ -41,7 +41,7 @@ https://<你的域名>/?url=https://ikunzyapi.com/api.php/provide/vod/
 
 ```jsx
 // 获取带代理前缀的 JSON
-https://<你的域名>/?format=1&source=jin18
+https://<你的域名>/?format=1&source=green
 
 // 获取代理 Base58 编码订阅
 https://<你的域名>/?format=3&source=full
@@ -77,7 +77,7 @@ https://api.example.workers.dev/?url=https://ikunzyapi.com/api.php/provide/vod/
 ### 示例 2：获取原始 JSON 配置（精简版）
 
 ```jsx
-https://api.example.workers.dev/?format=0&source=jin18
+https://api.example.workers.dev/?format=0&source=green
 ```
 
 ### 示例 3：获取带代理前缀的 JSON 配置（完整版）
@@ -112,7 +112,7 @@ https://api.example.workers.dev/?format=1&source=full&prefix=https://my-proxy.co
 | -------- | ---------------- | ------------------------------- | ------------ |
 | `url`    | 代理任意 API 请求 | 任意有效 URL                     | `?url=https://...` |
 | `format` | 配置模式         | `0 或 raw = 原始 JSON`  `1 或 proxy = 添加代理前缀`  `2 或 base58 = 原始 Base58`  `3 或 proxy-base58 = 代理 Base58` | `?format=0` |
-| `source` | 配置源选择       | `jin18` = 精简版`jingjian` = 精简+成人`full` = 完整版） | `?source=jin18` |
+| `source` | 配置源选择       | `green` = 精简版`jingjian` = 精简+成人`full` = 完整版） | `?source=green` |
 | `prefix` | 自定义代理前缀   | 任意代理地址                      | `?prefix=https://.../?url=` |
 | `errors&limit=10` | 查看错误日志 | `errors&limit=10`                 | `https://<你的域名>?errors&limit=10` |
 
@@ -122,7 +122,7 @@ https://api.example.workers.dev/?format=1&source=full&prefix=https://my-proxy.co
 
 | 配置源 | 资源数量 | 包含成人内容 | 适用场景 |
 | --- | --- | --- | --- |
-| **jin18** | 31个 | ❌ 否 | 家庭使用、轻量级应用 |
+| **green** | 31个 | ❌ 否 | 家庭使用、轻量级应用 |
 | **jingjian** | 61个 | ✅ 是 | 个人使用、中等需求 |
 | **full** | 88个 | ✅ 是 | 完整功能、最大兼容性 |
 
@@ -132,20 +132,20 @@ https://api.example.workers.dev/?format=1&source=full&prefix=https://my-proxy.co
 
 将 `\<你的域名\>` 替换为你的实际 Worker 地址：
 
-### 精简版（jin18）
+### 精简版（green）
 
 ```jsx
 # 原始 JSON
-https://<你的域名>/?format=0&source=jin18
+https://<你的域名>/?format=0&source=green
 
 # 带代理前缀的 JSON
-https://<你的域名>/?format=1&source=jin18
+https://<你的域名>/?format=1&source=green
 
 # 原始 Base58 编码
-https://<你的域名>/?format=2&source=jin18
+https://<你的域名>/?format=2&source=green
 
 # 代理 Base58 编码（推荐用于订阅）
-https://<你的域名>/?format=3&source=jin18
+https://<你的域名>/?format=3&source=green
 ```
 
 ### 精简+成人版（jingjian）
@@ -201,7 +201,7 @@ https://<你的域名>/?format=3&source=full
 
 ```jsx
 const JSON_SOURCES = {
-  'jin18': 'https://raw.githubusercontent.com/your-repo/jin18.json',
+  'green': 'https://raw.githubusercontent.com/your-repo/green.json',
   'jingjian': 'https://raw.githubusercontent.com/your-repo/jingjian.json',
   'full': 'https://raw.githubusercontent.com/your-repo/full.json'
 }
